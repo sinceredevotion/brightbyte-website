@@ -1,11 +1,11 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronRight, Code, Palette, Zap, ExternalLink, Menu, X, Github, Globe, Smartphone, Terminal, Cpu, Database } from 'lucide-react';
+import { ChevronRight, Zap, ExternalLink, Menu, X, Globe, Terminal, Cpu, Database } from 'lucide-react';
 
 const BrightByteLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [codeLines, setCodeLines] = useState<string[]>([]);
   const [activeMetric, setActiveMetric] = useState<number>(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -116,16 +116,16 @@ const BrightByteLanding = () => {
       setScrolled(window.scrollY > 50);
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+    // const handleMouseMove = (e: MouseEvent) => {
+    //   setMousePosition({ x: e.clientX, y: e.clientY });
+    // };
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
+    //window.addEventListener('mousemove', handleMouseMove);
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
+      //window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -296,7 +296,7 @@ const BrightByteLanding = () => {
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
-              We don't just build websites. We engineer revenue-generating machines 
+              We don&apos;t just build websites. We engineer revenue-generating machines 
               that outperform competitors by <span className="text-blue-600 font-bold">340%</span>.
             </p>
             
@@ -399,14 +399,14 @@ const BrightByteLanding = () => {
               </h2>
               
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We're not your typical agency. Our team includes senior engineers who've scaled 
+                We&apos;re not your typical agency. Our team includes senior engineers who&apos;ve scaled 
                 systems at <span className="font-semibold text-blue-600">Amazon</span> (handling 100M+ requests/day) 
                 and <span className="font-semibold text-purple-600">IBM Watson</span> (processing terabytes of AI data).
               </p>
               
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Every line of code is engineered for <span className="font-bold text-green-600">profit maximization</span>, 
-                not just pretty interfaces. We've generated <span className="font-bold text-blue-600">$850M+</span> in 
+                not just pretty interfaces. We&apos;ve generated <span className="font-bold text-blue-600">$850M+</span> in 
                 client revenue through performance optimization alone.
               </p>
 
@@ -529,7 +529,7 @@ const BrightByteLanding = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We don't just build features. We engineer profit-generating systems that 
+              We don&apos;t just build features. We engineer profit-generating systems that 
               outperform your competition and scale infinitely.
             </p>
           </div>
@@ -700,7 +700,7 @@ const BrightByteLanding = () => {
             
             <p className="text-xl sm:text-2xl mb-12 max-w-4xl mx-auto opacity-90 leading-relaxed">
               Every day you wait is another day your competitors gain market share. 
-              We've generated <span className="font-bold text-yellow-300">$850M+</span> for our clients. 
+              We&apos;ve generated <span className="font-bold text-yellow-300">$850M+</span> for our clients. 
               <span className="block mt-2">When do you want to start winning?</span>
             </p>
           </div>
