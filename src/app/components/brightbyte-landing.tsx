@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { ChevronRight, Zap, ExternalLink, Menu, X, Globe, Terminal, Cpu, Database } from 'lucide-react';
 
 const BrightByteLanding = () => {
@@ -166,7 +167,8 @@ const BrightByteLanding = () => {
       image: "bg-gradient-to-br from-blue-600 to-purple-700",
       tech: ["React", "TensorFlow.js", "WebRTC", "Redis"],
       metrics: "2.3B daily volume",
-      impact: "+$850M client profits"
+      impact: "+$850M client profits",
+      link: "/portfolios/neural"
     },
     {
       title: "Quantum E-Commerce",
@@ -175,7 +177,8 @@ const BrightByteLanding = () => {
       image: "bg-gradient-to-br from-emerald-500 to-teal-600",
       tech: ["Next.js", "GraphQL", "Stripe", "ML Pipeline"],
       metrics: "89% conversion boost",
-      impact: "10x revenue growth"
+      impact: "10x revenue growth",
+      link: "/portfolios/quantum"
     },
     {
       title: "BioTech Data Visualizer",
@@ -184,7 +187,8 @@ const BrightByteLanding = () => {
       image: "bg-gradient-to-br from-orange-500 to-red-600",
       tech: ["React", "D3.js", "WebAssembly", "Python"],
       metrics: "10TB data processed",
-      impact: "3 medical breakthroughs"
+      impact: "3 medical breakthroughs",
+      link: "/portfolios/biotech"
     }
   ];
 
@@ -599,9 +603,10 @@ const BrightByteLanding = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {portfolio.map((project, index) => (
-              <div key={index} 
-                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 relative">
-                
+              <Link 
+              key={index} 
+              href={project.link}
+              className="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
                 {/* Unique project preview with metrics overlay */}
                 <div className={`h-48 ${project.image} relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300"></div>
@@ -617,7 +622,7 @@ const BrightByteLanding = () => {
                   
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full">
-                      <ExternalLink className="w-5 h-5 text-gray-800" />
+                      <ExternalLink className="w-5 h-5 text-gray-800"/>
                     </div>
                   </div>
                 </div>
@@ -655,7 +660,7 @@ const BrightByteLanding = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
