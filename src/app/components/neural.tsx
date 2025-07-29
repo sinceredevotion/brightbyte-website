@@ -445,7 +445,7 @@ const NeuralTradingPortfolio = () => {
                 </div>
                 
                 <blockquote className="text-gray-700 italic mb-6 leading-relaxed">
-                  "{story.quote}"
+                  &quot;{story.quote}&quot;
                 </blockquote>
                 
                 <div className="grid grid-cols-2 gap-4">

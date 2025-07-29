@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ShoppingCart, Users, TrendingUp, Zap, Globe, Brain, Star, Package, CreditCard, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ShoppingCart, Users, TrendingUp, Zap, Globe, Brain, Star, CreditCard, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 const QuantumECommercePortfolio = () => {
@@ -417,7 +417,7 @@ const QuantumECommercePortfolio = () => {
                 </div>
                 
                 <blockquote className="text-gray-700 italic mb-6 leading-relaxed">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 
                 <div className="grid grid-cols-2 gap-4">
@@ -492,13 +492,13 @@ const QuantumECommercePortfolio = () => {
             </div>
             
             <div className="bg-gray-900 rounded-2xl p-6 text-white">
-              <div className="text-emerald-400 text-sm font-mono mb-4">// E-Commerce Architecture</div>
+              <div className="text-emerald-400 text-sm font-mono mb-4">{'// E-Commerce Architecture'}</div>
               <div className="space-y-2 text-sm font-mono">
                 <div><span className="text-blue-400">const</span> <span className="text-yellow-300">revenue</span> = <span className="text-emerald-400">aiRecommendations</span>.<span className="text-purple-400">optimize</span>();</div>
                 <div><span className="text-blue-400">const</span> <span className="text-yellow-300">conversion</span> = <span className="text-emerald-400">personalizeExperience</span>();</div>
                 <div><span className="text-blue-400">const</span> <span className="text-yellow-300">growth</span> = <span className="text-emerald-400">predictivePricing</span>.<span className="text-purple-400">maximize</span>();</div>
                 <div></div>
-                <div><span className="text-gray-500">// Result: 10x revenue growth</span></div>
+                <div><span className="text-gray-500">{'// Result: 10x revenue growth'}</span></div>
                 <div><span className="text-blue-400">return</span> <span className="text-yellow-300">businessSuccess</span>;</div>
               </div>
             </div>
